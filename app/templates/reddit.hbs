@@ -1,0 +1,14 @@
+<h1>Ember 1 - Router, Routes, and Templates</h1>
+{{#each model as |reddit|}}
+<div class="wrapper">
+  <div>Score: {{reddit.data.score}}</div>
+  <div>Title: <a href="{{reddit.data.url}}">{{reddit.data.title}}</a></div>
+  <div>Number of Comments: {{reddit.data.num_comments}}</div>
+  {{#if reddit.data.archived}}
+  <div>Archived?: Archived</div>
+  {{else}}
+  <div>Archived?: Not Archived</div>
+  {{/if}}
+  </div>
+  <br>
+{{/each}}
